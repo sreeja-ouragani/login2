@@ -60,7 +60,7 @@ function LoginForm() {
   return (
     <div className="login-background">
       <div className="login-form">
-        <h2>Login1</h2>
+        <h2>Login12</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div>
