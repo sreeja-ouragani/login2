@@ -1,0 +1,74 @@
+/* Container for the whole homepage */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    min-height: 300px;
+  }
+  
+  /* Heading styling */
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Container for images */
+  .image-links-container {
+    display: flex;
+    justify-content:space-around; /* Distributes equal space between images */
+    align-items: center;
+    width: 80%; /* Container width */
+    padding: 20px;
+    height:300px; /*50vh; Occupies the top half of the page */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Wrapper for each image and overlay text */
+  .image-wrapper {
+    position: relative;
+    flex: 1; /* Ensures each image container takes equal space */
+    max-width: 200px; /* Limits each image container width */
+    height: 100%;
+    margin: 0 10px; /* Adds consistent horizontal spacing */
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .link-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Overlay text styling */
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(140, 43, 231);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover effect on the image */
+  .image-link:hover .link-image {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+  }
+  
+  /* Show overlay text on hover */
+  .image-link:hover .image-text {
+    opacity: 1;
+  }
+  
